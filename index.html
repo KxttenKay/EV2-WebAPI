@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi-Wiki</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#inicio">Digi-Wiki</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#digimon">Digimon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#api">API</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex gap-2" id="formulario-busqueda" role="search">
+                    <input class="form-control" type="search"
+                        id="buscador"
+                        placeholder="Ejemplo: Agumon..."
+                        aria-label="Buscar Digimon">
+
+                    <button class="btn btn-outline-light" type="submit">
+                        Buscar!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="text-center py-5">
+        <h1>La Digi-Wiki</h1>
+        <p>Encuentra información de una gran variedad de criaturas digitales!</p>
+    </header>
+
+    <main class="container my-5">
+        <section id="digimon">
+            <h2 class="mb-4">Nuestros Digimon</h2>
+
+            <p id="mensaje" role="status">
+                Cargando Digimon...
+            </p>
+
+            <div id="galeria" class="row g-4"></div>
+        </section>
+    </main>
+
+    <footer id="api" class="text-center py-4">
+        <h3>API utilizada</h3>
+        <p>Toda la información se obtuvo de</p>
+
+        <a href="https://digi-api.com/api/v1/digimon"
+            target="_blank" rel="digimon">
+            <p id="apitexto">API de Digimon</p>
+        </a>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
